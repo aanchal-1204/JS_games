@@ -1,0 +1,128 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    overflow: none;
+     background-color: aliceblue;
+}
+
+.main-Container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Fill full viewport */
+    background-color: aliceblue;
+}
+
+/* 🧷 Sticky fixed-height ScoreBar */
+.scoreBoard {
+    height: 5rem;
+    min-height: 5rem;
+    background-color: rgb(71, 198, 198);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0; /* Prevents height shrinking */
+}
+
+/* 📜 Scrollable Bubble Area */
+.bubble_scroll_area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+
+/* 🎯 Flex Grid Container */
+.bubble_container {
+    width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+/* 🟡 Beautiful Bubble Design */
+.bubble {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border: 3px solid #d3d3d3;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #5c5c5c;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.bubbles:hover {
+    transform: scale(1.1);
+    background-color: #f0f8ff;
+}
+
+
+ 
+
+.append-container {
+  
+   display: flex;
+    height: 100%;
+
+
+    justify-content: center;
+    align-items: center;
+    display: no;
+    flex-direction: column;
+   
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.game-status {
+    font-size: 3rem;
+    font-weight: bold;
+   
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.final-score {
+    font-size: 1.8rem;
+   
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.reset-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: rgb(71, 198, 198);
+  
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: rgb(58, 165, 165);
+} 
